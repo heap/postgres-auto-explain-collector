@@ -1,4 +1,5 @@
 _ = require 'lodash'
+{Client} = require('pg')
 fs = require 'fs'
 path = require 'path'
 postgresCSVLog = require 'postgres-csvlog'
@@ -57,3 +58,10 @@ exports.watchLatestLogFile = (directory, fn, callback) ->
       findLatestLogFilename (err, newLogFile) ->
         if newLogFile isnt currentLogFile
           setTimeout (-> process.exit()), 10000
+
+exports.writeRecordToDB = (record, callback) ->
+  client = new Client()
+  # pg-node will automatically use the config variables PGUSER, PGHOST, etc.
+  client.connect()
+
+  client.query 'INSERT INTO auto_explain_logs SELECT $1', [record], callback
