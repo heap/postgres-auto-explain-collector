@@ -1,0 +1,23 @@
+{
+  "name": "postgres-auto-explain-collector",
+  "version": "0.1.0",
+  "description": "Code for gathering query plans from auto_explain from the Postgres logs.",
+  "main": "index.js",
+  "dependencies": {
+    "postgres-csvlog": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heap/postgres-auto-explain-collector.git"
+  },
+  "author": "Michael Malis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heap/postgres-auto-explain-collector/issues"
+  },
+  "homepage": "https://github.com/heap/postgres-auto-explain-collector#readme"
+}
