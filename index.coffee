@@ -1,5 +1,5 @@
 _ = require 'lodash'
-{Client} = require('pg')
+{Client} = require 'pg'
 fs = require 'fs'
 path = require 'path'
 postgresCSVLog = require 'postgres-csvlog'

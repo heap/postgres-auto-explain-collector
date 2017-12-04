@@ -4,6 +4,9 @@
   "description": "Code for gathering query plans from auto_explain from the Postgres logs.",
   "main": "index.js",
   "dependencies": {
+    "always-tail2": "^1.0.0",
+    "lodash": "^4.17.4",
+    "pg": "^7.4.0",
     "postgres-csvlog": "^1.0.2"
   },
   "devDependencies": {},
